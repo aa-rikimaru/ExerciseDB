@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-let exercises = require('../data/exercises.json');
+const exercises = require('../data/exercises.json');
 
 /* Exercises API */
 router.get('/', (req, res) => {
-  res.send('Fetches a list of exercises');
+  res.render('exercises-display', { title: 'Exercise Directory', exercises: exercises });
 });
 
 router.get('/:id', (req, res) => {
