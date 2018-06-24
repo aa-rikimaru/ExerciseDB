@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+let exercises = require('../data/exercises.json');
+
 /* Exercises API */
 router.get('/', (req, res) => {
   res.send('Fetches a list of exercises');
