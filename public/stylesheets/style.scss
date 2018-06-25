@@ -1,0 +1,21 @@
+body {
+  padding: 50px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+}
+
+
+a {
+  color: #00B7FF
+}
+
+.exercise-card {
+  margin: 25px 0 0 15px
+  padding: 0 5px 0 5px
+  height: 300px
+  border-radius: 5px
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+
+.exercise-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+}

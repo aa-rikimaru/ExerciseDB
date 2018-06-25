@@ -7,17 +7,18 @@
   <body>
     <div class="container">
       <div class="row">
-        <% exercises.forEach(function(exercise) { %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"><%=exercise['name']%></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%=exercise['author']%></h6>
-            <p class="card-text"><%=exercise['instructions']%></p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <% exercises.forEach(function(exercise) { %>
+          <div class="card exercise-card" style="width:18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%=exercise['name']%></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%=exercise['author']%></h6>
+              <hr/>
+              <p class="card-text"><%=exercise['instructions']%></p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
           </div>
-        </div>
-        <% }); %>
+          <% }); %>
       </div>
     </div>
   </body>
