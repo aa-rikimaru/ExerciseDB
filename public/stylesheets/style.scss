@@ -4,13 +4,17 @@ $ubuntu: 'Ubuntu', sans-serif;
 
 body {
   padding: 50px;
-  // font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
   font-family: $ubuntu;
 }
 
-
 a {
   color: #00B7FF;
+}
+
+.list-group-exercise:hover {
+  // background-color: #1e9088;
+  // border-color: #1e9088;
+  // color: white;
 }
 
 .exercise-card {

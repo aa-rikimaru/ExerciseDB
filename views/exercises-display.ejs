@@ -7,25 +7,27 @@
   <body>
     <div class="container">
       <div class="row">
-          <% exercises.forEach(function(exercise) { %>
-          <div clsas="col-sm-4">
-            <div oncontextmenu="dropDownMenu()" class="card exercise-card">
-              <div class="card-body">
-                <h5 class="card-title"><%=exercise['name']%></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><%=exercise['author']%></h6>
-                <hr/>
-                <p class="card-text exercise-description">
-                  <%=exercise['level']%><br/>
-                  <%=exercise['type']%><br/>
-                  <%=exercise['muscleGroup']%><br/>
-                  <%=exercise['equipment']%>
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+        <div class="col-4">
+          <div class="list-group">
+            <% exercises.forEach(function(exercise) { %>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-exercise">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><%=exercise['name']%></h5>
+                <small><%=exercise['type']%></small>
               </div>
-            </div>
+              <p class="mb-1">
+                Muscles Trained: <%=exercise['muscleGroup']%><br/>
+                Equipment Used: <%=exercise['equipment']%>
+              </p>
+              <small><%=exercise['author']%></small>
+            </a>
+            <% }); %>
           </div>
-          <% }); %>
+        </div>
+        <div class="col-8">
+          <h3>Exercise Name Here</h3>
+          <hr/>
+        </div>
       </div>
     </div>
   </body>
