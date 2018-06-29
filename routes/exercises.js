@@ -1,11 +1,18 @@
+const _ = require('lodash');
 const express = require('express');
 const router = express.Router();
+
 
 const exercises = require('../data/exercises.json');
 
 /* Exercises API */
 router.get('/', (req, res) => {
-  res.render('exercises-display', { title: 'Exercise Directory', exercises: exercises });
+  res.render('exercises-display',
+  {
+    title: 'Exercise Directory',
+    exercises: exercises,
+    exerciseMap: JSON.stringify(_.keyBy(exercises, 'name')),
+  });
 });
 
 router.get('/:id', (req, res) => {

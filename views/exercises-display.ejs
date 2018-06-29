@@ -4,13 +4,13 @@
     <title><%= title %></title>
     <%- include('header') -%>
   </head>
-  <body>
+  <body onload="initializeData(<%=exerciseMap%>)">
     <div class="container">
       <div class="row">
         <div class="col-4">
           <div class="list-group">
             <% exercises.forEach(function(exercise) { %>
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-exercise">
+            <a onclick="selectExercise(e)" href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-exercise">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><%=exercise['name']%></h5>
                 <small><%=exercise['type']%></small>
@@ -26,6 +26,7 @@
         </div>
         <div class="col-8">
           <h3>Exercise Name Here</h3>
+          <button class="btn btn-primary" onclick="displayExercise()">Display Exercise</button>
           <hr/>
         </div>
       </div>
