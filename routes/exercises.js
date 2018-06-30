@@ -17,13 +17,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/display/:exerciseName', (req, res) => {
-  res.render('exercises-display',
-  {
+  res.send(JSON.stringify({
     title: 'Exercises Directory',
-    exercises: exercises,
-    exerciseMap: JSON.stringify(_.keyBy(exercises, 'name')),
     exerciseToDisplay: exerciseMap[req.params.exerciseName]
-  });
+  }));
 })
 
 router.get('/:id', (req, res) => {

@@ -10,7 +10,7 @@
         <div class="col-4">
           <div class="list-group">
             <% exercises.forEach(function(exercise) { %>
-            <a href="/exercises/display/<%=exercise['name']%>" class="list-group-item list-group-item-action flex-column align-items-start list-group-exercise">
+            <div onclick="selectExercise('<%=exercise['name']%>')" href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-exercise">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><%=exercise['name']%></h5>
                 <small><%=exercise['type']%></small>
@@ -20,13 +20,12 @@
                 Equipment Used: <%=exercise['equipment']%>
               </p>
               <small><%=exercise['author']%></small>
-            </a>
+            </div>
             <% }); %>
           </div>
         </div>
         <div class="col-8">
-          <h3><%=exerciseToDisplay.name%></h3>
-          <button class="btn btn-primary" onclick="displayExercise()">Display Exercise</button>
+          <h3 id="currentExercise"><%=exerciseToDisplay.name%></h3>
           <hr/>
         </div>
       </div>
