@@ -25,8 +25,54 @@
           </div>
         </div>
         <div class="col-8">
-          <h3 id="currentExercise"><%=exerciseToDisplay.name%></h3>
+          <h3 id="currentExerciseHeader"><%=exerciseToDisplay.name%></h3>
           <hr/>
+          <form>
+            <div class="form-group">
+              <label for="exerciseNameInput">Exercise Name</label>
+              <input type="text" class="form-control" id="exerciseNameInput" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="exerciseAuthorInput">Exercise Author</label>
+              <input type="text" class="form-control" id="exerciseAuthorInput" placeholder="Author">
+            </div>
+            <div class="form-group">
+              <label for="exerciseLevelSelector">Level</label>
+              <select class="form-control" id="exerciseLevelSelector">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exerciseTypeSelector">Type</label>
+              <select class="form-control" id="exerciseTypeSelector">
+                <option value="Strength">Strength</option>
+                <option value="Strongman">Strongman</option>
+                <option value="Olympic">Olympic</option>
+                <option value="Powerlifting">Powerlifting</option>
+                <option value="Hypertrophy">Hypertrophy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exerciseMuscleGroupMultiSelector">Muscle Group</label>
+              <select multiple class="form-control" id="exerciseMuscleGroupMultiSelector">
+                <option value="Chest">Chest</option>
+                <option value="Shoulder">Shoulder</option>
+                <option value="Arms">Arms</option>
+                <option value="Back">Back</option>
+                <option value="Legs">Legs</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="instructionsTextArea">Instructions</label>
+              <textarea class="form-control" id="instructionsTextArea" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="notesTextArea">Notes</label>
+              <textarea class="form-control" id="notesTextArea" rows="5"></textarea>
+            </div>
+          </form>
         </div>
       </div>
     </div>
