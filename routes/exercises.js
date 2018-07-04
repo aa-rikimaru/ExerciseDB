@@ -28,15 +28,15 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  res.send('Creates an exercise');
+  console.log('Creates an exercise:', req.body.name);
 });
 
-router.put('/:id', (req, res) => {
-  res.send('Updates exercise', req.params.id);
+router.put('/', (req, res) => {
+  console.log('Updates exercise:', req.body.name);
 });
 
 router.delete('/:id', (req, res) => {
-  res.send('Deletes exercise', req.params.id);
+  console.log('Deletes exercise:', exerciseMap[req.params.id].name);
 });
 
 module.exports = router;

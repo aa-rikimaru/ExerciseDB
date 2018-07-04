@@ -57,15 +57,15 @@
             <div class="form-group">
               <label for="exerciseMuscleGroupMultiSelector">Muscle Group</label>
               <select multiple class="form-control" id="exerciseMuscleGroupMultiSelector">
-                <option value="Chest">Chest</option>
-                <option value="Shoulder">Shoulder</option>
-                <option value="Arms">Arms</option>
-                <option value="Back">Back</option>
-                <option value="Legs">Legs</option>
+                <option id="option-chest" value="Chest">Chest</option>
+                <option id="option-shoulder" value="Shoulder">Shoulder</option>
+                <option id="option-arms" value="Arms">Arms</option>
+                <option id="option-back" value="Back">Back</option>
+                <option id="option-legs" value="Legs">Legs</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="instructionsTextArea">Instructions</label>
+              <label for="instructionsTextArea">Instructions</label>,
               <textarea class="form-control" id="instructionsTextArea" rows="5"></textarea>
             </div>
             <div class="form-group">
@@ -73,6 +73,10 @@
               <textarea class="form-control" id="notesTextArea" rows="5"></textarea>
             </div>
           </form>
+          <div class="horizontal-button-group">
+            <button onclick="deleteExercise()" class="btn btn-danger">Delete</button>
+            <button onclick="saveExercise()" class="btn btn-primary">Save</button>
+          </div>
         </div>
       </div>
     </div>

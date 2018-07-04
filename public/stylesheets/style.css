@@ -6,14 +6,13 @@ body {
 a {
   color: #00B7FF; }
 
-.exercise-card {
-  margin: 3rem 0 0 2rem;
-  width: 20rem;
-  height: 25rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
-
-.exercise-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+.horizontal-button-group {
+  display: flex;
+  flex-flow: row-reverse;
+  margin: 25px 0 0 0; }
+  .horizontal-button-group button {
+    margin: 0 0 0 15px;
+    height: 40px;
+    width: 90px; }
 
 /*# sourceMappingURL=style.css.map */
