@@ -11,8 +11,10 @@ function selectExercise(exerciseName) {
     type: "GET",
     success: function(data) {
       let exercise = JSON.parse(data).exerciseToDisplay;
-      selectedExercise = exercise;
       changeFocusTo(exercise);
+    },
+    error: function(err) {
+      console.log(err)
     }
   });
 }
@@ -24,6 +26,9 @@ function saveExercise() {
     data: selectedExercise,
     success: function(res) {
       console.log('POST Request:', res);
+    },
+    error: function(err) {
+      console.log(err)
     }
   });
 }
@@ -39,6 +44,16 @@ function deleteExercise() {
 }
 
 function changeFocusTo(exercise) {
+  if (selectedExercise != null) {
+      let oldExerciseCard = document.getElementById(selectedExercise.name.replace(" ", "-"));
+      oldExerciseCard.className = oldExerciseCard.className.replace("active", ""); // Will remove any active
+  }
+
+  let newExerciseCard = document.getElementById(exercise.name.replace(" ", "-"));
+  newExerciseCard.className += ' active';
+
+  selectedExercise = exercise;
+
   let exerciseNameHeader = document.getElementById('currentExerciseHeader');
   let exerciseNameInput = document.getElementById('exerciseNameInput');
   let exerciseAuthorInput = document.getElementById('exerciseAuthorInput');
