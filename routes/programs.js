@@ -27,7 +27,7 @@ router.get('/single', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log('Creating a program:\n', req.body);
+  console.log('Persisting a program:\n', req.body);
   let program = req.body;
   let fileName = program.name.trim().replace(/\//g, "_") + '.json';
   let filePath = `${programDataDir}${fileName}`;
